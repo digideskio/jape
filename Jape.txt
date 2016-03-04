@@ -1,7 +1,7 @@
 
               JAPE: A Jagged Alliance 2 Person Editor
                     Readme File - 14 October 2008
-                             Version 0.40
+                             Version 0.41
                     Copyright 2008 Douglas Greiman
 		      http://www.duggelz.org/jape
 
@@ -24,14 +24,17 @@ view and edit the items and attributes of your mercenaries, or any
 other character in the game.
 
 JAPE works with the following versions of Jagged Alliance 2:
- * US version 1.03  (build 99.06.09)
- * US version 1.04  (build 99.08.11)
- * US version 1.05r (build 99.09.15)
- * US version 1.06  (Build 99.11.12)
- * US version 1.07  (Build 00.05.29)
+ * US version 1.03      (Build 99.06.09)
+ * US version 1.04      (Build 99.08.11)
+ * US version 1.05r     (Build 99.09.15)
+ * US version 1.06      (Build 99.11.12)
+ * US version 1.07      (Build 00.05.29)
+ * US version 1.12      (Build 04.12.-2)
+ * US version 1.13-2085 (Build 08.04.27)
 Other versions may work, but are untested.
 
-JAPE does not work with version 1.13.
+Only stats editing is possible for version 1.13 save games, not item
+editing.
 
 -------------------------- 
  2. System Requirements
@@ -110,7 +113,10 @@ Please put JAPE in the subject line.
 --------------------------
  6. Changes
 --------------------------
-Changes in 0.40</P>
+Changes in 0.41
+* Stat editing for JA2 version 1.13
+
+Changes in 0.40
 * Recompiled against a newer Java JVM
 * Minor bugfixes in save game format detection
 

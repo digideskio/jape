@@ -18,13 +18,14 @@ public class JapeAlg
 	int i = 0;
 	byte lastchar = 0;
 	int offset = 0;
+
 	for( i = 0; i < textLength; ++i )
-	{
-	    byte salt = (byte) table[offset];
-	    ciphertext[i] = (byte) (plaintext[i] + lastchar + salt);
-	    offset = (offset + 1) % 49;
-	    lastchar = ciphertext[i];
-	}
+	    {
+		byte salt = (byte) table[offset];
+		ciphertext[i] = (byte) (plaintext[i] + lastchar + salt);
+		offset = (offset + 1) % 49;
+		lastchar = ciphertext[i];
+	    }
 	return ciphertext;
     }
 
@@ -37,13 +38,14 @@ public class JapeAlg
 	int i = 0;
 	byte lastchar = 0;
 	int offset = 0;
+
 	for( i = 0; i < textLength; ++i )
-	{
-	    byte salt = (byte) table[offset];
-	    plaintext[i] = (byte) (ciphertext[i] - lastchar - salt);
-	    offset = (offset + 1) % 49;
-	    lastchar = ciphertext[i];
-	}
+	    {
+		byte salt = (byte) table[offset];
+		plaintext[i] = (byte) (ciphertext[i] - lastchar - salt);
+		offset = (offset + 1) % 49;
+		lastchar = ciphertext[i];
+	    }
 	return plaintext;
     }
 

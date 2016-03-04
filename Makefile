@@ -37,8 +37,8 @@ EXEFILE = Jape.exe
 MAINCLASS = JapeGui.class
 PACKAGEPATH = duggelz/jape/
 PACKAGEPATHUP = ../..
-ZIPFILE = JAPE040.ZIP
-SRCZIPFILE = JAPE040SRC.ZIP
+ZIPFILE = JAPE041.ZIP
+SRCZIPFILE = JAPE041SRC.ZIP
 
 # Generic Rules
 %.class : %.java
@@ -48,6 +48,7 @@ SRCZIPFILE = JAPE040SRC.ZIP
 # wrote a helper batch file.
 # cd $(PACKAGEPATHUP) ; $(JAR) cvfm $(PACKAGEPATH)$@ $(PACKAGEPATH)$< $(PACKAGEPATH)*.class
 %.jar : %.mft
+	-rm $@
 	jarhelper.bat
 
 # Targets for this project
@@ -69,9 +70,13 @@ $(ZIPFILE) : $(JARFILE) Jape.html Jape.txt
 	$(ZIP) $(ZIPFLAGS) $(ZIPFILE) $^
 
 $(SRCZIPFILE) : *.java *.html *.txt Makefile *.bat
+	-rm $(SRCZIPFILE)
 	$(ZIP) $(ZIPFLAGS) $(SRCZIPFILE) $^
 
-run: run-exe
+test: $(OBJS)
+	java -classpath $(PACKAGEPATHUP) duggelz.jape.SaveGame
+
+run: run-java
 
 run-exe: $(EXEFILE)
 	./$(EXEFILE)

@@ -417,7 +417,6 @@ public class JapeFrame extends Frame implements DataChangeListener
     }
 
     public void dataChanged(DataChangeEvent event) {
-	//	System.err.println("JapeFrame.dataChanged("+event+")");
 	this.saveGameModified = true;
     }
 

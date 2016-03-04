@@ -9,7 +9,6 @@ package duggelz.jape;
 
 import java.util.Hashtable;
 
-// == struct OBJECTTYPE
 public class Item extends BasicStructure
 {
     public static final int ITEM_LENGTH                 = 0x24;
@@ -35,7 +34,6 @@ public class Item extends BasicStructure
     public static final int AMMO_ID_OFFSET              = 0x08;
     public static final int AMMO_PERCENT_OFFSET         = 0x0A;
 
-	// attached objects
     public static final int ATTACHMENT_1_ID_OFFSET      = 0x10;
     public static final int ATTACHMENT_2_ID_OFFSET      = 0x12;
     public static final int ATTACHMENT_3_ID_OFFSET      = 0x14;

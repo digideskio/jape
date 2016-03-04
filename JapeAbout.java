@@ -31,7 +31,7 @@ public class JapeAbout extends Dialog {
 
 	Label line1 = new Label("JAPE: A Jagged Alliance 2 Save Game Editor", Label.CENTER);
 	textPanel.add(line1);
-	Label line2 = new Label("Version 0.40", Label.CENTER);
+	Label line2 = new Label("Version 0.41", Label.CENTER);
 	textPanel.add(line2);
 	Label line3 = new Label("Copyright (c) 2008  Douglas Greiman", Label.CENTER);
 	textPanel.add(line3);
