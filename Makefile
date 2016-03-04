@@ -6,13 +6,15 @@
 
 ## Constants
 JAVAC = javac
-JAVACFLAGS = -classpath ../.. -g -target 1.1
+JAVACFLAGS = -classpath ../.. -g -target 1.5 -source 1.5
 JAVA = java
 JVIEW = jview
 JVIEWFLAGS = /d:JIT=none /vst
 JAR = jar
 JEXEGEN = jexegen
 JEXEGENFLAGS = /v /w
+ZIP = zip
+ZIPFLAGS = -X
 
 ## Source and object files
 SOURCES = JapeGui.java JapeFrame.java JapeAbout.java StatPanel.java ItemPanel.java ItemDetailPanel.java \
@@ -35,18 +37,25 @@ EXEFILE = Jape.exe
 MAINCLASS = JapeGui.class
 PACKAGEPATH = duggelz/jape/
 PACKAGEPATHUP = ../..
+ZIPFILE = JAPE040.ZIP
+SRCZIPFILE = JAPE040SRC.ZIP
 
 # Generic Rules
 %.class : %.java
 	$(JAVAC) $(JAVACFLAGS) $<
 
+# Couldn't figure out how to get this to work on Windows, so
+# wrote a helper batch file.
+# cd $(PACKAGEPATHUP) ; $(JAR) cvfm $(PACKAGEPATH)$@ $(PACKAGEPATH)$< $(PACKAGEPATH)*.class
 %.jar : %.mft
-	cd $(PACKAGEPATHUP) ; $(JAR) cvfm $(PACKAGEPATH)$@ $(PACKAGEPATH)$< $(PACKAGEPATH)*.class
+	jarhelper.bat
 
 # Targets for this project
-all: exe
+all: jar zip
 
 jar: $(JARFILE)
+
+zip: $(ZIPFILE) $(SRCZIPFILE)
 
 exe: $(EXEFILE)
 
@@ -54,6 +63,13 @@ $(JARFILE) : $(OBJS) $(MANIFEST)
 
 $(EXEFILE): $(OBJS)
 	$(JEXEGEN) $(JEXEGENFLAGS) /out:$(EXEFILE) /base:$(PACKAGEPATHUP) /main:duggelz.jape.JapeGui $(PACKAGEPATH)*.class
+
+$(ZIPFILE) : $(JARFILE) Jape.html Jape.txt
+	-rm $(ZIPFILE)
+	$(ZIP) $(ZIPFLAGS) $(ZIPFILE) $^
+
+$(SRCZIPFILE) : *.java *.html *.txt Makefile *.bat
+	$(ZIP) $(ZIPFLAGS) $(SRCZIPFILE) $^
 
 run: run-exe
 
@@ -70,4 +86,5 @@ run-obj: $(OBJS)
 	$(JAVA) $(JAVAFLAGS) -classpath ../.. duggelz.jape.JapeGui
 
 clean:
-	-rm *.class $(JARFILE) $(EXEFILE) 2>/dev/null
+	-rm *.class $(JARFILE) $(EXEFILE) $(ZIPFILE) $(SRCZIPFILE)
+

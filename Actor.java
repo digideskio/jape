@@ -9,6 +9,7 @@ package duggelz.jape;
 
 import java.util.Hashtable;
 
+// == struct MERCPROFILESTRUCT
 public class Actor extends BasicStructure
 {
     // Static data
@@ -29,7 +30,7 @@ public class Actor extends BasicStructure
     public static final int EXP_INC_OFFSET     = 0x132;
     public static final int STR_INC_OFFSET     = 0x133;
     public static final int LDR_INC_OFFSET     = 0x134;
-    //public static finaint l #???_INC_OFFSET    = 0x135;
+    //public static final #???_INC_OFFSET    = 0x135;
     public static final int KILLS_OFFSET       = 0x136;
     public static final int KILLS_LENGTH       = 0x2;
     public static final int ASSISTS_OFFSET     = 0x138;

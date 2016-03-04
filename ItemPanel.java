@@ -41,7 +41,7 @@ public class ItemPanel extends InsetPanel implements DataChangeListener
 
 	// Constraints
 	this.constraint.anchor = GridBagConstraints.SOUTHWEST;
-	this.constraint.fill = GridBagConstraints.NONE;
+	this.constraint.fill = GridBagConstraints.BOTH;
 	this.constraint.gridx = 0;
 	this.constraint.gridheight = 1;
 	this.constraint.gridwidth = 1;

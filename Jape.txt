@@ -1,0 +1,129 @@
+
+              JAPE: A Jagged Alliance 2 Person Editor
+                    Readme File - 14 October 2008
+                             Version 0.40
+                    Copyright 2008 Douglas Greiman
+		      http://www.duggelz.org/jape
+
+--------------------------
+ Table of Contents
+--------------------------
+  1. About JAPE
+  2. System Requirements
+  3. Installation
+  4. Running JAPE
+  5. Support
+  6. Changes
+
+--------------------------
+ 1. About JAPE
+--------------------------
+
+JAPE is a save game editor for Jagged Alliance 2. JAPE allows you to
+view and edit the items and attributes of your mercenaries, or any
+other character in the game.
+
+JAPE works with the following versions of Jagged Alliance 2:
+ * US version 1.03  (build 99.06.09)
+ * US version 1.04  (build 99.08.11)
+ * US version 1.05r (build 99.09.15)
+ * US version 1.06  (Build 99.11.12)
+ * US version 1.07  (Build 00.05.29)
+Other versions may work, but are untested.
+
+JAPE does not work with version 1.13.
+
+-------------------------- 
+ 2. System Requirements
+-------------------------- 
+
+JAPE requires that you install the Sun Java runtime, version 5 or
+above.  If you don't have this installed already, go to
+http://www.java.com/en/download/ and get it.
+
+--------------------------
+ 3. Installation
+--------------------------
+
+Extract the contents of JAPE040.ZIP into the directory where you
+installed Jagged Alliance 2. Sorry, no InstallShield setup program.
+
+--------------------------
+ 4. Running JAPE
+--------------------------
+
+4.1 Starting Jape
+
+From the desktop, create a shortcut to the file JAPE.JAR, and
+double-click on the shortcut. The JAPE main window should appear. Or
+from the command line, go to the Jagged Alliance directory and type
+JAPE.JAR.
+
+If you doubleclick JAPE.JAR and you get an error message saying that
+"Windows cannot open this file:", then you need to install the Sun
+Java runtime.  See above.
+
+4.2 Opening a Saved Game
+
+From the "File" menu, select "Open...". Navigate to the SavedGames
+directory and select a saved game file. The saved games will be named
+SaveGame01.sav, SaveGame02.sav, etc.
+
+4.3 Editing Character Data
+
+The left side of the JAPE window contains a list of all the editable
+characters in the saved game. Characters with a * beside their name
+are the mercenaries on your team. Click on the name of character, and
+his/her statistics will be displayed on the right side of the window.
+
+The middle of the JAPE windows contains detailed information on a
+single character. Some information is only present for your currently
+hired mercenaries. Most of the fields are editable. Go ahead, give
+your custom merc 99 Marksmanship.
+
+The right side of the JAPE windows contains information on a the
+currently selected merc's equiptment. Again, this information is only
+present for your currently hired team members.
+
+4.4 Save Your Changes
+
+Once you're happy with the changes you've made, open the "File" menu
+and select "Save".
+
+--------------------------
+ 5. Support
+--------------------------
+Hah! You wish! Just to be clear:
+
+JAPE comes with NO WARRANTIES, WHETHER EXPRESS OR IMPLIED, INCLUDING,
+BUT NOT LIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND
+FITNESS FOR A PARTICULAR PURPOSE.
+
+But, if you have suggestions, or you have found a bug, or if you have
+a comment, question, unsolicited praise or you're just itching to give
+away your fortune to a stranger, email me at:
+
+duggelz2@comcast.net
+
+Please put JAPE in the subject line.
+
+--------------------------
+ 6. Changes
+--------------------------
+Changes in 0.40</P>
+* Recompiled against a newer Java JVM
+* Minor bugfixes in save game format detection
+
+Changes in 0.32
+* Fixed camouflage kit/boobytrap kit mixup
+* Fixed a bug where the 7th and later mercs don't show up as hired
+
+Changes in 0.31
+* Fixed attachment boxes to allow grenades and detonators
+
+Changes in 0.30
+* Input boxes silently and automatically ignore bad input
+* Item editor disables irrelevant fields
+* Item editor fills in many fields automatically
+* Editor is smarter about when save is not needed
+* Added ability to edit money amount

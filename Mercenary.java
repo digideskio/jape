@@ -171,3 +171,7 @@ public class Mercenary extends BasicStructure
         this.data[this.CHECKSUM_OFFSET+3] = (byte) ((checksum >> 24) & 0xFF);
     }
 }
+
+// Local Variables:
+// tab-width: 8
+// End:

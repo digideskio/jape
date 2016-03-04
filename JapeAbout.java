@@ -26,15 +26,17 @@ public class JapeAbout extends Dialog {
 
 	// Text Panel
 	Panel textPanel = new InsetPanel(5, 5, 5, 5);
-	textPanel.setLayout(new GridLayout(3,1));
+	textPanel.setLayout(new GridLayout(4,1));
 	textPanel.setBackground(SystemColor.text);
 
 	Label line1 = new Label("JAPE: A Jagged Alliance 2 Save Game Editor", Label.CENTER);
 	textPanel.add(line1);
-	Label line2 = new Label("Version 0.32", Label.CENTER);
+	Label line2 = new Label("Version 0.40", Label.CENTER);
 	textPanel.add(line2);
-	Label line3 = new Label("Copyright (c) 1999  Douglas Greiman", Label.CENTER);
+	Label line3 = new Label("Copyright (c) 2008  Douglas Greiman", Label.CENTER);
 	textPanel.add(line3);
+	Label line4 = new Label("http://www.duggelz.org/", Label.CENTER);
+	textPanel.add(line4);
 
 	// Button bar
 	Panel buttonPanel = new InsetPanel(0, 5, 0, 5);

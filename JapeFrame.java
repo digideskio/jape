@@ -282,7 +282,8 @@ public class JapeFrame extends Frame implements DataChangeListener
 	    OptionDialog.showMessageDialog(
 		this, 
 		"Unable to load file.\n" +
-		"The save game format was not recognized.",
+		"The save game format was not recognized.\n" +
+		e.getMessage(),
 		this.getTitle(),
 		OptionDialog.ERROR_MESSAGE);
 	    return false;
@@ -433,3 +434,7 @@ public class JapeFrame extends Frame implements DataChangeListener
 	//japeFrame.doOpen();
     }
 }
+
+// Local Variables:
+// tab-width: 8
+// End:

@@ -1,0 +1,144 @@
+<HTML>
+<HEAD>
+   <META HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=iso-8859-1">
+   <META NAME="Author" CONTENT="Douglas Greiman">
+   <TITLE>JAPE</TITLE>
+</HEAD>
+
+<BODY>
+<H1>JAPE: A Jagged Alliance 2 Person Editor</H1>
+<H1>Version 0.40</H1>
+
+<H2>About JAPE</H2>
+
+<P>JAPE is a save game editor for Jagged Alliance 2. JAPE allows you to
+view and edit the items and attributes of your mercenaries, or any
+other character in the game.</P>
+
+<P>JAPE works with the following versions of Jagged Alliance 2:</P>
+  <UL>
+    <LI>US version 1.03  (build 99.06.09)</LI>
+    <LI>US version 1.04  (build 99.08.11)</LI>
+    <LI>US version 1.05r (build 99.09.15)</LI>
+    <LI>US version 1.06  (Build 99.11.12)</LI>
+    <LI>US version 1.07  (Build 00.05.29)</LI>
+  </UL>
+<P>Other versions may work, but are untested.</P>
+
+<P>JAPE does not work with version 1.13.</P>
+
+<H2>System Requirements</H2>
+
+<P>JAPE requires that you install the Sun Java runtime, version 5 or
+above.  If you don't have this installed already, go to the
+<a href="http://www.java.com/en/download/">Java Download Page</a>
+and get it.
+</P>
+
+<H2>Installation</H2>
+
+<P>Download the file <A href="JAPE040.zip"><TT>JAPE040.zip</TT></A>.</P>
+
+<P>Extract the contents of <TT>JAPE040.ZIP</TT> into the directory where you
+installed Jagged Alliance 2. Sorry, no InstallShield setup program.</P>
+
+<H2>Running JAPE</H2>
+
+<H3>Starting Jape</H3>
+
+<P>From the desktop, create a shortcut to the file <TT>JAPE.JAR</TT>,
+and double-click on the shortcut. The JAPE main window should
+appear. Or from the command line, go to the Jagged Alliance directory
+and type <TT>JAPE.JAR</TT></P>
+
+<P>If you doubleclick <TT>JAPE.JAR</TT> and you get an error message
+saying that "<TT>Windows cannot open this file:</TT>",
+then you need to install the Sun Java runtime.  See above.</P>
+
+<H3>Opening a Saved Game</H3>
+
+<P>From the <I>File</I> menu, select <I>Open...</I>. 
+Navigate to the <TT>SavedGames</TT> directory and select a saved game file. 
+The saved games will be named
+<TT>SaveGame01.sav</TT>, <TT>SaveGame02.sav</TT>, etc.</P>
+
+<H3>Editing Character Data</H3>
+
+<P>The left side of the JAPE window contains a list of all the editable
+characters in the saved game. Characters with a * beside their name
+are the mercenaries on your team. Click on the name of character, and
+his/her statistics will be displayed on the right side of the window.</P>
+
+<P>The middle of the JAPE window contains detailed information on a
+single character. Some information is only present for your currently
+hired mercenaries. Most of the fields are editable. Go ahead, give
+your custom merc 99 Marksmanship.</P>
+
+<P>The right side of the JAPE window contains information on the
+currently selected merc's equiptment. Again, this information is only
+present for your currently hired team members.</P>
+
+<H3>Save Your Changes</H3>
+
+Once you're happy with the changes you've made, open the <I>File</I> menu
+and select <I>Save</I>.
+
+<H2>Support</H2>
+
+<P>Hah! You wish! Just to be clear:</P>
+
+<P>JAPE comes with NO WARRANTIES, WHETHER EXPRESS OR IMPLIED, INCLUDING,
+BUT NOT LIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND
+FITNESS FOR A PARTICULAR PURPOSE.</P>
+
+<P>But, if you have suggestions, or you have found a bug, or if you have
+a comment, question, unsolicited praise or you're just itching to give
+away your fortune to a stranger, email me at:</P>
+
+<P>
+  <A href="mailto:duggelz2@comcast.net">
+    Douglas Greiman &lt;duggelz2@comcast.net&gt;
+  </A>
+</P>
+
+<P>Please put JAPE in the subject line.</P>
+
+<H2>Changes</H2>
+<P>Changes in 0.40</P>
+  <UL>
+    <LI>Recompiled against a newer Java JVM</LI>
+    <LI>Minor bugfixes in save game format detection</LI>
+  </UL>
+<P>Changes in 0.32</P>
+  <UL>
+    <LI>Fixed camouflage kit/boobytrap kit mixup</LI>
+    <LI>Fixed a bug where the 7th and later mercs don't show up as hired</LI>
+  </UL>
+<P>Changes in 0.31</P>
+  <UL>
+    <LI>Fixed attachment boxes to allow grenades and detonators</LI>
+  </UL>
+<P>Changes in 0.30</P>
+  <UL>
+    <LI>Input boxes silently and automatically ignore bad input</LI>
+    <LI>Item editor disables irrelevant fields</LI>
+    <LI>Item editor fills in many fields automatically</LI>
+    <LI>Editor is smarter about when save is not needed</LI>
+    <LI>Added ability to edit money amount</LI>
+  </UL>
+
+<!--
+<H2>Wishlist</H2>
+  <UL>
+    <LI>Nicer GUI</LI>
+    <LI>Use mouse wheel to scroll item lists</LI>
+  </UL>
+
+  <P>Maybe I'll get to these ... maybe not.</P>
+-->
+
+<P>[Back to <A href="http://www.duggelz.org/">Douglas Greiman's
+Home Page</A>]</P>
+
+</BODY>
+</HTML>
